@@ -44,7 +44,10 @@ class Solution:
     def isPowerofTwo(self,n : int ) -> bool:
         ##Your code here
         if n>0:
-            # a number is power of two if bitwise "and" between n and n-1 is 0: 
+
+            if n%2!=0 and n!=1:
+                return False
+           # a number is power of two if bitwise "and" between n and n-1 is 0: 
             if (n&(n-1))==0:
                 return True
         else:
